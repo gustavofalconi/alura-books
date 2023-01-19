@@ -100,4 +100,32 @@
         width: 40%;
         margin: 3em auto;
     }
+
+    .botoes__ancora:active {
+        background: var(--azul);
+    }
+}
+
+@media screen and (min-width: 1728px){
+    .carrossel__container{
+        display: flex;
+        margin: 0 15vw 3em 15vw;
+        align-items: center;
+    }
+
+    .swiper-pagination {
+        margin: 1em 0;
+    }
+
+    .swiper {
+        width: 40%;
+    }
+
+    .card{
+        margin: 5em auto 3em auto ;
+    }
+
+    .descricao__titulo {
+        font-size: 32px;
+    }
 }

@@ -4,7 +4,6 @@
     justify-content: space-between;
     align-items: center;
     position: relative;
-    padding: 0 3em;
 }
 
 .cabecalho__menu-hamburguer {
@@ -12,6 +11,18 @@
     height: 24px;
     background-image: url("../img/Menu.svg");
     display: inline-block;
+}
+
+.container__rotulo{
+    padding: 1em;
+}
+
+.container__botao:checked ~ .container__rotulo > .cabecalho__menu-hamburguer{
+    background-image: url(../img/Menu\ Aberto.svg) ;
+}
+
+.container__botao:checked ~ .container__rotulo {
+    background: var(--azul-degrade);
 }
 
 .container {
@@ -30,10 +41,6 @@
     position: absolute;
     top: 100%;
     width: 70vw;
-}
-
-.container__botao {
-    display: none;
 }
 
 .container__botao:checked ~.lista-menu {
@@ -59,15 +66,15 @@
     text-transform: uppercase;
 }
 
-.container__titulo {
-    display: none;
-}
-
-.opcoes {
+.opcoes, .container__texto, .container__titulo, .container__botao {
     display: none;
 }
 
 @media screen and (min-width: 1024px) {
+
+    .cabecalho{
+        padding: 0 3em;
+    }
     .container__titulo, .container__titulo--negrito {
         font-family: var(--fonte-secundaria);
         font-size: 30px;
@@ -87,8 +94,13 @@
     }
 
     .opcoes__item {
-        padding: 0 1em;
+        padding: 2em 1em;
         text-transform: uppercase;
+    }
+
+    .opcoes__item:hover {
+        cursor: pointer;
+        color: var(--laranja);
     }
 
     .opcoes__link {
@@ -96,11 +108,11 @@
         color: var(--preto);
     }
 
-    .container__imagem-transparente {
-        display: none;
+    .opcoes__link:hover {
+        color: var(--laranja);
     }
 
-    .cabecalho__menu-hamburguer {
+    .container__imagem-transparente, .cabecalho__menu-hamburguer, .opcoes__botao, .container__rotulo {
         display: none;
     }
 
@@ -109,11 +121,46 @@
         width: auto;
     }
 
-    .opcoes__botao{
-        display: none;
+    .opcoes__botao:checked ~.opcoes__rotulo>.opcoes__item{
+        background: var(--azul-degrade);
+        color: var(--branco);
     }
 
     .container__imagem-compras, .container__imagem-usuario {
         padding: 1em 2em;
+    }
+
+    .lista-menu__item:hover {
+        background: var(--azul-degrade);
+    }
+
+    .lista-menu__item:hover > .lista-menu__link {
+        -webkit-text-fill-color: var(--branco);
+        text-decoration: none;
+    }
+}
+
+@media screen and (min-width: 1728px) {
+    .container__link {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: var(--preto);
+    }
+
+    .opcoes {
+        margin-right: auto;
+    }
+
+    .container__titulo {
+        margin-right: 1.5em;
+    }
+
+    .container__texto {
+        display: block;
+    }
+
+    .container__texto:hover {
+        color: var(--laranja);
     }
 }
