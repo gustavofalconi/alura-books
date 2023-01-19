@@ -35,3 +35,26 @@
     background-position: 0.6em;
     padding-left: 3em;
 }
+
+@media screen and (min-width: 1024px) {
+    .contato {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+        align-items: center;
+        padding: 3em 6em;
+    }
+
+    .contato__descricao{
+        width: 75%;
+    }
+
+    .contato__titulo{
+        font-size: 24px;
+    }
+
+    .contato__email{
+        width: 70%;
+    }
+
+}
