@@ -14,17 +14,16 @@ hr {
 @media screen and (min-width: 1024px) {
     .rodape{
         display: grid;
-        grid-template-columns: 1fr 3fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
         padding: 4em 1em;
-    }
-
-    .rodape__grande{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
     }
 
     .rodape__titulo {
         font-size: 24px;
+    }
+
+    .rodape__grande {
+        display: block;
     }
 
     .rodape__secao {
@@ -51,6 +50,4 @@ hr {
         color: var(--cinza-escuro);
         margin-left: 0.7em;
     }
-
-    
 }

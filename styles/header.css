@@ -4,6 +4,7 @@
     justify-content: space-between;
     align-items: center;
     position: relative;
+    padding: 0 3em;
 }
 
 .cabecalho__menu-hamburguer {
@@ -110,5 +111,9 @@
 
     .opcoes__botao{
         display: none;
+    }
+
+    .container__imagem-compras, .container__imagem-usuario {
+        padding: 1em 2em;
     }
 }
